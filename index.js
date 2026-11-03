@@ -157,11 +157,3 @@ const server = http.createServer(async (request, response) => {
   }
 });
 
-server.listen(port, () => {
-  console.log(`ESP32 Wi-Fi API listening on port ${port}`);
-});
-
-server.on("error", (error) => {
-  console.error("API server failed to start:", error.message);
-  process.exitCode = 1;
-});
